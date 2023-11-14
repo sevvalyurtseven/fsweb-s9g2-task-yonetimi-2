@@ -12,7 +12,7 @@ const Task = ({ taskObj, onComplete }) => {
 
   const accentClass = differenceInDays(tarih, new Date()) <= 3 ? "normal" : "urgent";
 
-  console.log(taskObj.deadline, differenceInDays(tarih, new Date()));
+  // console.log(taskObj.deadline, differenceInDays(tarih, new Date()));
 
   return (
     <div className="task">
@@ -21,7 +21,7 @@ const Task = ({ taskObj, onComplete }) => {
       <p>{taskObj.description}</p>
       <div>
         {taskObj.people.map((p) => (
-          <span className="pill" key={p}>{p}</span>
+          <span className="inline-block py-[5px] px-3 text-base border-solid border-2 border-pill rounded-[30px] mr-1 mb-1.5 " key={p}>{p}</span>
         ))}
       </div>
       {onComplete && <button onClick={() => onComplete(taskObj.id)}>Tamamlandı</button>}
