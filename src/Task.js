@@ -17,9 +17,9 @@ const Task = ({ taskObj, onComplete }) => {
   //1 rem = 16px
 
   return (
-    <div className="p-6 bg-white rounded-md leading-normal mt-4 shadow-[0_4px_5px_0_rgb(0 0 0 / 10%)] ">
+    <div className="task p-6 bg-white rounded-md leading-normal mt-4 shadow-[0_4px_5px_0_rgb(0 0 0 / 10%)] ">
       <h3 className="text-lg text-[#c8781a] ">{taskObj.title}</h3>
-      <div className="text-xs pt-1">
+      <div className="deadline text-xs pt-1">
         son teslim:{" "}
         <span className={`${accentClass} py-1 px-2 rounded-sm inline-block`}>
           {kalanGun}
@@ -31,7 +31,7 @@ const Task = ({ taskObj, onComplete }) => {
       <div>
         {taskObj.people.map((p) => (
           <span
-            className="inline-block py-1.5 px-3 text-base border-solid border-2 border-[#ccc] rounded-full mr-1 mb-1.5 "
+            className="pill inline-block py-1.5 px-3 text-base border-solid border-2 border-[#ccc] rounded-full mr-1 mb-1.5 "
             key={p}
           >
             {p}
